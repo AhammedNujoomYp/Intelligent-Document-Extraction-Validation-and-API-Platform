@@ -1,0 +1,1 @@
+# Intelligent-Document-Extraction-Validation-and-API-Platform
