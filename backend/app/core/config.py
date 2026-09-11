@@ -7,20 +7,29 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 # Project Paths
 # ---------------------------------------------------------
 
+CURRENT_FILE = Path(__file__).resolve()
+
+# Local Windows:
 # financial-document-intelligence/
-# ├── backend/
-# │   └── app/
-# │       └── core/
-# │           └── config.py
+# └── backend/
+#     └── app/
+#         └── core/
+#             └── config.py
+#
+# Render Docker:
+# /app/
+# ├── app/
+# │   └── core/
+# │       └── config.py
 # └── frontend/
 
-# config.py
-# parents[0] = core
-# parents[1] = app
-# parents[2] = backend
-# parents[3] = project root
+if (CURRENT_FILE.parents[3] / "frontend").exists():
+    # Local development
+    PROJECT_ROOT = CURRENT_FILE.parents[3]
+else:
+    # Docker / Render
+    PROJECT_ROOT = CURRENT_FILE.parents[2]
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 BACKEND_DIR = PROJECT_ROOT / "backend"
 
@@ -75,8 +84,12 @@ class Settings(BaseSettings):
     # OCR
     # -----------------------------------------------------
 
-    # Leave empty by default for deployment.
-    # On Windows, set TESSERACT_CMD in .env if required.
+    # Render/Linux:
+    # Tesseract is installed by Docker and available in PATH.
+    #
+    # Windows:
+    # Set TESSERACT_CMD in backend/.env if needed.
+
     tesseract_cmd: str = ""
 
 
