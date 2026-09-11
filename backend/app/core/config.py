@@ -13,13 +13,14 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 # │       └── core/
 # │           └── config.py
 # └── frontend/
-#
+
+# config.py
 # parents[0] = core
 # parents[1] = app
 # parents[2] = backend
-# parents[3] = financial-document-intelligence
+# parents[3] = project root
 
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 BACKEND_DIR = PROJECT_ROOT / "backend"
 
@@ -44,7 +45,7 @@ class Settings(BaseSettings):
 
     app_version: str = "1.0.0"
 
-    debug: bool = True
+    debug: bool = False
 
 
     # -----------------------------------------------------
@@ -74,9 +75,9 @@ class Settings(BaseSettings):
     # OCR
     # -----------------------------------------------------
 
-    tesseract_cmd: str = (
-        r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-    )
+    # Leave empty by default for deployment.
+    # On Windows, set TESSERACT_CMD in .env if required.
+    tesseract_cmd: str = ""
 
 
     # -----------------------------------------------------
