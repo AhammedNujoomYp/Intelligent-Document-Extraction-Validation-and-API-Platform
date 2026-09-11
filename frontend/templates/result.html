@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Document Result</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/css/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <header>
+
+        <button
+            type="button"
+            onclick="goBack()"
+        >
+            ← Back to Dashboard
+        </button>
+
+        <h1 id="documentTitle">
+            Document Result
+        </h1>
+
+        <p id="documentSubtitle">
+            Processing result
+        </p>
+
+    </header>
+
+
+    <!-- PROCESSING SUMMARY -->
+
+    <section class="upload-card">
+
+        <h2>Processing Summary</h2>
+
+        <div id="summary">
+            Loading...
+        </div>
+
+    </section>
+
+
+    <!-- FILE VALIDATION -->
+
+    <section class="documents-section">
+
+        <h2>File Validation</h2>
+
+        <div id="fileValidation">
+            Loading...
+        </div>
+
+    </section>
+
+
+    <!-- EXTRACTED DATA -->
+
+    <section class="documents-section">
+
+        <h2>Extracted Data</h2>
+
+        <div id="extractedData">
+            Loading...
+        </div>
+
+    </section>
+
+
+    <!-- FINANCIAL VALIDATION -->
+
+    <section class="documents-section">
+
+        <h2>Financial Validation</h2>
+
+        <div id="validation">
+            Loading...
+        </div>
+
+    </section>
+
+
+    <!-- PROCESSING METADATA -->
+
+    <section class="documents-section">
+
+        <h2>Processing Metadata</h2>
+
+        <div id="processingMetadata">
+            Loading...
+        </div>
+
+    </section>
+
+
+    <!-- RAW JSON -->
+
+    <section class="documents-section">
+
+        <h2>Raw JSON</h2>
+
+        <pre id="rawJson">Loading...</pre>
+
+    </section>
+
+</div>
+
+
+<script src="/static/js/result.js"></script>
+
+</body>
+
+</html>

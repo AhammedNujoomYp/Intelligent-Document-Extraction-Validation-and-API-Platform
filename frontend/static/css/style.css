@@ -1,0 +1,318 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #666;
+}
+
+
+/* =========================================================
+   CARDS / SECTIONS
+   ========================================================= */
+
+.upload-card,
+.documents-section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.upload-card h2,
+.documents-section h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+    margin-top: 15px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   PROCESS MESSAGE
+   ========================================================= */
+
+#message {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.message.processing {
+    color: #444;
+}
+
+.message.success {
+    color: #1b6b2a;
+}
+
+.message.error {
+    color: #a40000;
+}
+
+
+/* =========================================================
+   DOCUMENT TABLE
+   ========================================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #f1f1f1;
+    font-weight: bold;
+}
+
+tbody tr:hover {
+    background: #fafafa;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.status.pass {
+    background: #dff5e1;
+    color: #1b6b2a;
+}
+
+.status.fail,
+.status.failed {
+    background: #ffe0e0;
+    color: #a40000;
+}
+
+.status.not_applicable {
+    background: #eeeeee;
+    color: #555;
+}
+
+
+/* =========================================================
+   RESULT PAGE
+   ========================================================= */
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.result-grid > div {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+}
+
+.result-grid h3 {
+    margin-top: 0;
+}
+
+.result-grid p {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   RESULT SECTIONS
+   ========================================================= */
+
+.validation-summary {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+}
+
+.data-card {
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+}
+
+
+/* =========================================================
+   RAW JSON
+   ========================================================= */
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-family: Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   RESULT PAGE HEADER BUTTON
+   ========================================================= */
+
+header button {
+    padding: 8px 14px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th,
+    td {
+        white-space: nowrap;
+    }
+}
+
+
+/* =========================================================
+   SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .upload-card,
+    .documents-section {
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
