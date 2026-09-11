@@ -166,3 +166,18 @@ The web interface provides:
                 │     SQLite       │    │ Structured JSON │
                 │    Database      │    │   API Response  │
                 └──────────────────┘    └─────────────────┘
+
+
+## Live Deployment
+
+Frontend:
+https://intelligent-document-extraction-iawm.onrender.com/
+
+API:
+https://intelligent-document-extraction-iawm.onrender.com
+
+Swagger:
+https://intelligent-document-extraction-iawm.onrender.com/docs
+
+Health:
+https://intelligent-document-extraction-iawm.onrender.com/api/v1/health
