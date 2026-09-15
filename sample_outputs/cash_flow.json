@@ -1,0 +1,41 @@
+{
+  "document_type": "cash_flow",
+  "document_name": "sample_cash_flow.pdf",
+  "status": "PASS",
+  "extracted_data": {
+    "period": "2026",
+    "opening_cash": 100000.0,
+    "operating_cash_flow": 50000.0,
+    "investing_cash_flow": -20000.0,
+    "financing_cash_flow": 10000.0,
+    "fx_translation_adjustment": 0.0,
+    "net_change_in_cash": 40000.0,
+    "closing_cash": 140000.0
+  },
+  "validation": [
+    {
+      "check": "Operating + Investing + Financing + FX Adjustment = Net Change",
+      "inputs": {
+        "operating_cash_flow": 50000.0,
+        "investing_cash_flow": -20000.0,
+        "financing_cash_flow": 10000.0,
+        "fx_translation_adjustment": 0.0
+      },
+      "calculated_value": 40000.0,
+      "reported_value": 40000.0,
+      "variance": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Opening Cash + Net Change = Closing Cash",
+      "inputs": {
+        "opening_cash": 100000.0,
+        "net_change_in_cash": 40000.0
+      },
+      "calculated_value": 140000.0,
+      "reported_value": 140000.0,
+      "variance": 0.0,
+      "status": "PASS"
+    }
+  ]
+}
