@@ -1,0 +1,25 @@
+{
+  "document_type": "balance_sheet",
+  "document_name": "sample_balance_sheet.pdf",
+  "status": "PASS",
+  "extracted_data": {
+    "period": "2026",
+    "assets": 500000.0,
+    "liabilities": 200000.0,
+    "equity": 300000.0
+  },
+  "validation": [
+    {
+      "check": "Assets = Liabilities + Equity",
+      "inputs": {
+        "assets": 500000.0,
+        "liabilities": 200000.0,
+        "equity": 300000.0
+      },
+      "calculated_value": 500000.0,
+      "reported_value": 500000.0,
+      "variance": 0.0,
+      "status": "PASS"
+    }
+  ]
+}
