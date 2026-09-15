@@ -1,0 +1,54 @@
+{
+  "document_type": "profit_and_loss",
+  "document_name": "sample_profit_and_loss.pdf",
+  "status": "PASS",
+  "extracted_data": {
+    "period": "2026",
+    "interest_earned": 50000.0,
+    "other_income": 10000.0,
+    "total_income": 60000.0,
+    "interest_expended": 15000.0,
+    "operating_expenses": 20000.0,
+    "provisions_and_contingencies": 5000.0,
+    "total_expenditure": 40000.0,
+    "net_profit_before_minority_interest": 20000.0,
+    "minority_interest": null,
+    "net_profit": 20000.0
+  },
+  "validation": [
+    {
+      "check": "Interest Earned + Other Income = Total Income",
+      "inputs": {
+        "interest_earned": 50000.0,
+        "other_income": 10000.0
+      },
+      "calculated_value": 60000.0,
+      "reported_value": 60000.0,
+      "variance": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Interest Expended + Operating Expenses + Provisions = Total Expenditure",
+      "inputs": {
+        "interest_expended": 15000.0,
+        "operating_expenses": 20000.0,
+        "provisions_and_contingencies": 5000.0
+      },
+      "calculated_value": 40000.0,
+      "reported_value": 40000.0,
+      "variance": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Total Income - Total Expenditure = Net Profit",
+      "inputs": {
+        "total_income": 60000.0,
+        "total_expenditure": 40000.0
+      },
+      "calculated_value": 20000.0,
+      "reported_value": 20000.0,
+      "variance": 0.0,
+      "status": "PASS"
+    }
+  ]
+}
