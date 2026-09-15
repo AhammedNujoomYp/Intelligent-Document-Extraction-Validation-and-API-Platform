@@ -1,0 +1,45 @@
+{
+  "document_type": "invoice",
+  "document_name": "sample_invoice.pdf",
+  "status": "PASS",
+  "extracted_data": {
+    "invoice_number": "INV-001",
+    "invoice_date": "2026-01-10",
+    "customer_name": "ABC Technologies",
+    "subtotal": 1000.0,
+    "tax": 180.0,
+    "total": 1180.0,
+    "line_items": [
+      {
+        "description": "Laptop",
+        "quantity": 2,
+        "unit_price": 500.0,
+        "line_total": 1000.0
+      }
+    ]
+  },
+  "validation": [
+    {
+      "check": "Quantity × Unit Price = Line Total",
+      "inputs": {
+        "quantity": 2,
+        "unit_price": 500.0
+      },
+      "calculated_value": 1000.0,
+      "reported_value": 1000.0,
+      "variance": 0.0,
+      "status": "PASS"
+    },
+    {
+      "check": "Subtotal + Tax = Total",
+      "inputs": {
+        "subtotal": 1000.0,
+        "tax": 180.0
+      },
+      "calculated_value": 1180.0,
+      "reported_value": 1180.0,
+      "variance": 0.0,
+      "status": "PASS"
+    }
+  ]
+}
